@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box with Telegram Integration</title>
+</head>
+<body>
+    <form id="commentForm">
+        <textarea name="message" placeholder="Enter your comment"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+    document.getElementById("commentForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        var formData = new FormData(this);
+
+        fetch("/api/send_message", {
+            method: "POST",
+            body: formData
+        }).then(response => {
+            if (response.ok) {
+                alert("Message sent to Telegram bot!");
+            } else {
+                alert("Failed to send message.");
+            }
+        });
+    });
+    </script>
+</body>
+</html>
