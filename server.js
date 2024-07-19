@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const sendMessage = require('./api/send_message');
+require('dotenv').config();  // Load environment variables from .env file
 
 const app = express();
 
