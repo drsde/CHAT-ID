@@ -7,8 +7,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/api/send_message', async (req, res) => {
     const message = req.body.message;
-    const chat_id = "YOUR_CHAT_ID"; // Telegram chat ID
-    const bot_token = "YOUR_BOT_TOKEN"; // Bot token
+    const chat_id = "5565154096"; // Telegram chat ID
+    const bot_token = "6507539608:AAEXcP2rHaZF2UyHixVzN_JDRgDKdh17kdc"; // Bot token
 
     const url = `https://api.telegram.org/bot${bot_token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(message)}`;
 
