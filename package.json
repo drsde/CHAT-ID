@@ -1,13 +1,13 @@
 {
-    "name": "my-project",
-    "version": "1.0.0",
-    "main": "server.js",
-    "scripts": {
-        "start": "node server.js"
-    },
-    "dependencies": {
-        "express": "^4.17.1",
-        "body-parser": "^1.19.0",
-        "node-fetch": "^2.6.1"
-    }
+  "name": "my-project",
+  "version": "1.0.0",
+  "main": "api/send_message.js",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0"
+  }
 }
