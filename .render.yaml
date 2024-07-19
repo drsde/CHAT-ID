@@ -1,0 +1,12 @@
+services:
+- type: web
+  name: my-project
+  env: node
+  plan: free
+  buildCommand: 'npm install'
+  startCommand: 'npm start'
+  envVars:
+    - key: TELEGRAM_BOT_TOKEN
+      value: "YOUR_BOT_TOKEN"
+    - key: TELEGRAM_CHAT_ID
+      value: "YOUR_CHAT_ID"
